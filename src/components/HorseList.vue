@@ -6,7 +6,7 @@ const { horses = [], loading = false } = defineProps<{
 </script>
 
 <template>
-  <div class="p-4 gap-2 flex flex-col h-full overflow-y-auto">
+  <div class="p-4 gap-2 flex flex-col xl:h-full xl:overflow-y-auto">
     <h2 class="text-xl font-bold">Horse List</h2>
     <div v-show="!loading" class="flex flex-col">
       <div
@@ -15,9 +15,9 @@ const { horses = [], loading = false } = defineProps<{
         :key="horse.number"
       >
         <span class="col-span-1">{{ horse.number }}</span>
-        <span class="col-span-4">{{ horse.name }}</span>
+        <span class="col-span-5">{{ horse.name }}</span>
         <span class="col-span-2">{{ horse.condition }}</span>
-        <span class="col-span-3">{{ horse.color }}</span>
+        <span class="col-span-2">{{ horse.color }}</span>
       </div>
     </div>
     <div v-show="loading">

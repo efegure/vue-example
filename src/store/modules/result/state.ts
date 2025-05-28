@@ -5,4 +5,5 @@ export const state = {
   },
   currentRound: 0,
   isLoading: false,
+  isRoundLoading: false,
 }

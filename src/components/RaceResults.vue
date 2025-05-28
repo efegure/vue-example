@@ -3,24 +3,26 @@ const {
   raceSchedule = { name: '', date: '', rounds: [] },
   raceResult = { roundResults: [] },
   horseMap = new Map<number, Horse>(),
+  loading = false,
 } = defineProps<{
   raceSchedule: RaceSchedule
   raceResult: RaceResult
   horseMap: Map<number, Horse>
+  loading: boolean
 }>()
 </script>
 
 <template>
-  <div class="p-4 gap-2 flex flex-col h-full overflow-y-auto">
+  <div class="p-4 gap-2 flex flex-col xl:h-full xl:overflow-y-auto">
     <h2 class="text-xl font-bold">Race Results</h2>
-    <div class="flex flex-row gap-2 items-center">
+    <div v-show="!loading" class="flex flex-row gap-2 items-center">
       <p class="text-lg font-semibold text-green-600">{{ raceSchedule?.name }}</p>
       <p class="text-lg font-semibold">-</p>
       <p class="text-lg font-semibold text-gray-600">
         {{ new Date(raceSchedule?.date).toLocaleDateString() }}
       </p>
     </div>
-    <div class="gap-2 flex flex-col">
+    <div v-show="!loading" class="gap-2 flex flex-col">
       <div
         class="gap-2 flex flex-col"
         v-for="(roundResult, index) in raceResult.roundResults"
@@ -40,5 +42,6 @@ const {
         </div>
       </div>
     </div>
+    <p v-show="loading">Loading...</p>
   </div>
 </template>

@@ -3,10 +3,12 @@ const {
   currentRound = 0,
   raceSchedule = { name: '', date: '', rounds: [] },
   roundResult = { winningOrderIds: [] },
+  loading = false,
 } = defineProps<{
   currentRound: number
   raceSchedule: RaceSchedule
   roundResult: RoundResult
+  loading: boolean
 }>()
 
 const emit = defineEmits<{
@@ -31,6 +33,7 @@ const nextRace = () => {
 
 <template>
   <div class="flex flex-row gap-2 items-center justify-end">
+    <p class="text-lg font-semibold text-gray-600" v-show="loading">Horses are running...</p>
     <button
       v-if="!roundResult?.winningOrderIds?.length"
       class="bg-green-600 text-white p-2 cursor-pointer font-bold"

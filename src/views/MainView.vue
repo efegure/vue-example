@@ -1,43 +1,50 @@
 <template>
-  <div class="xl:h-screen flex flex-col">
-    <header class="bg-gray-200 p-4">
-      <nav class="flex gap-4 justify-between">
-        <h1 class="text-2xl font-bold">Horse Racing</h1>
-        <RaceControls
-          :currentRound="currentRound"
-          :raceSchedule="raceSchedule"
-          :roundResult="roundResult"
-          @startRound="handleStartRound"
-          @nextRound="handleNextRound"
-          @nextRace="handleNextRace"
+  <div class="flex flex-col h-screen">
+    <div class="flex flex-col h-full">
+      <header class="bg-gray-200 p-4 flex flex-row">
+        <nav class="flex gap-4 justify-between w-full">
+          <h1 class="text-2xl font-bold">Horse Racing</h1>
+          <RaceControls
+            :currentRound="currentRound"
+            :raceSchedule="raceSchedule"
+            :roundResult="roundResult"
+            :loading="getters.getIsRoundLoading"
+            @startRound="handleStartRound"
+            @nextRound="handleNextRound"
+            @nextRace="handleNextRace"
+          />
+        </nav>
+      </header>
+
+      <main class="grid grid-cols-12 gap-4 h-full overflow-y-auto">
+        <HorseList
+          class="xl:col-span-3 lg:col-span-4 col-span-12"
+          :horses="horses"
+          :loading="getters.getHorsesLoading"
         />
-      </nav>
-    </header>
-    <main class="grid grid-cols-12 gap-4 h-full overflow-y-auto flex flex-grow">
-      <HorseList
-        class="xl:col-span-2 lg:col-span-4 col-span-12"
-        :horses="horses"
-        :loading="getters.getHorsesLoading"
-      />
-      <RaceTrack
-        :horseMap="horseMap"
-        :raceSchedule="raceSchedule"
-        :round="round"
-        :roundResult="roundResult"
-        class="xl:col-span-6 lg:col-span-8 col-span-12"
-      />
-      <RaceSchedule
-        :horseMap="horseMap"
-        :raceSchedule="raceSchedule"
-        class="xl:col-span-2 lg:col-span-4 col-span-12"
-      />
-      <RaceResults
-        :horseMap="horseMap"
-        :raceResult="raceResult"
-        :raceSchedule="raceSchedule"
-        class="xl:col-span-2 lg:col-span-4 col-span-12"
-      />
-    </main>
+        <RaceTrack
+          :horseMap="horseMap"
+          :raceSchedule="raceSchedule"
+          :round="round"
+          :roundResult="roundResult"
+          :loading="getters.getResultsLoading && getters.getHorsesLoading"
+          class="xl:col-span-5 lg:col-span-8 col-span-12"
+        />
+        <RaceSchedule
+          :horseMap="horseMap"
+          :raceSchedule="raceSchedule"
+          :loading="getters.getRaceIsLoading"
+          class="xl:col-span-2 lg:col-span-4 col-span-12"
+        />
+        <RaceResults
+          :horseMap="horseMap"
+          :raceResult="raceResult"
+          :raceSchedule="raceSchedule"
+          :loading="getters.getResultsLoading"
+          class="xl:col-span-2 lg:col-span-4 col-span-12"
+        />
+      </main>
+    </div>
   </div>
 </template>
 

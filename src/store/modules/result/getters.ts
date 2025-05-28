@@ -8,4 +8,7 @@ export const getters = {
   getResultsLoading(state: ResultState) {
     return state.isLoading
   },
+  getIsRoundLoading(state: ResultState) {
+    return state.isRoundLoading
+  },
 }

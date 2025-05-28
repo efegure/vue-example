@@ -12,4 +12,7 @@ export const mutations = {
   setLoading(state: ResultState, isLoading: boolean) {
     state.isLoading = isLoading
   },
+  setIsRoundLoading(state: ResultState, isLoading: boolean) {
+    state.isRoundLoading = isLoading
+  },
 }
