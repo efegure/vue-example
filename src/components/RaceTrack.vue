@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import type { Horse, RaceTrackProps } from '@/types'
 import HorseRacer from './HorseRacer.vue'
 
 const {
@@ -7,13 +8,7 @@ const {
   round = { length: 0, participantIds: [] },
   roundResult = { winningOrderIds: [] },
   loading = false,
-} = defineProps<{
-  horseMap: Map<number, Horse>
-  raceSchedule: RaceSchedule
-  round: RaceRound
-  roundResult: RoundResult
-  loading: boolean
-}>()
+} = defineProps<RaceTrackProps>()
 </script>
 
 <template>

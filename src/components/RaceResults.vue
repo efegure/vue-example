@@ -1,15 +1,12 @@
 <script setup lang="ts">
+import type { Horse, RaceResultsProps } from '@/types'
+
 const {
   raceSchedule = { name: '', date: '', rounds: [] },
   raceResult = { roundResults: [] },
   horseMap = new Map<number, Horse>(),
   loading = false,
-} = defineProps<{
-  raceSchedule: RaceSchedule
-  raceResult: RaceResult
-  horseMap: Map<number, Horse>
-  loading: boolean
-}>()
+} = defineProps<RaceResultsProps>()
 </script>
 
 <template>

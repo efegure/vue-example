@@ -1,8 +1,7 @@
 <script setup lang="ts">
-const { horses = [], loading = false } = defineProps<{
-  horses: Horse[]
-  loading: boolean
-}>()
+import type { HorseListProps } from '@/types'
+
+const { horses = [], loading = false } = defineProps<HorseListProps>()
 </script>
 
 <template>

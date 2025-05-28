@@ -1,3 +1,5 @@
+import type { RaceState } from '@/types/store'
+
 export const getters = {
   getRaceSchedule(state: RaceState) {
     return state.raceSchedule

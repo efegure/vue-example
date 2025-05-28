@@ -1,5 +1,7 @@
 <script setup lang="ts">
-const { horse, winningOrderIds } = defineProps<{ horse?: Horse; winningOrderIds: number[] }>()
+import type { HorseRacerProps } from '@/types'
+
+const { horse, winningOrderIds } = defineProps<HorseRacerProps>()
 </script>
 
 <template>

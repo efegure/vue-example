@@ -1,15 +1,12 @@
 <script setup lang="ts">
+import type { RaceControlsProps } from '@/types'
+
 const {
   currentRound = 0,
   raceSchedule = { name: '', date: '', rounds: [] },
   roundResult = { winningOrderIds: [] },
   loading = false,
-} = defineProps<{
-  currentRound: number
-  raceSchedule: RaceSchedule
-  roundResult: RoundResult
-  loading: boolean
-}>()
+} = defineProps<RaceControlsProps>()
 
 const emit = defineEmits<{
   startRound: [id: number] // named tuple syntax

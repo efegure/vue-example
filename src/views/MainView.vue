@@ -53,6 +53,7 @@ import { HorseList, RaceTrack, RaceSchedule, RaceResults, RaceControls } from '.
 import { useStore } from 'vuex'
 import { computed } from 'vue'
 import { onMounted } from 'vue'
+import type { Horse } from '@/types'
 
 const { dispatch, getters } = useStore()
 

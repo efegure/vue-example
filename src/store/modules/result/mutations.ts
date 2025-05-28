@@ -1,3 +1,5 @@
+import type { RaceResult, ResultState } from '@/types'
+
 export const mutations = {
   setRoundResult(state: ResultState, raceResult: RaceResult) {
     state.raceResult.roundResults.push(raceResult.roundResults[raceResult.roundResults.length - 1])
