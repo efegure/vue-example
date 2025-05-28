@@ -1,3 +1,5 @@
+import type { ResultState } from '@/types'
+
 export const getters = {
   getRaceResult(state: ResultState) {
     return state.raceResult
