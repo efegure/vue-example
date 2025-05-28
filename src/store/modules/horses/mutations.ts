@@ -1,4 +1,4 @@
-import type { Horse } from '@/types'
+import type { Horse, HorsesState } from '@/types'
 
 export const mutations = {
   setHorses(state: HorsesState, horses: Horse[]) {

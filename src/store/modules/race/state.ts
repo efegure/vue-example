@@ -1,4 +1,4 @@
-import type { RaceState } from '@/types/store'
+import type { RaceState } from '@/types'
 
 export const state: RaceState = {
   raceSchedule: undefined,

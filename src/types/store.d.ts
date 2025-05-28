@@ -10,3 +10,8 @@ export type RaceState = {
   isLoading: boolean
   error: string | null
 }
+
+export type HorsesState = {
+  horses?: Horse[]
+  isLoading: boolean
+}
