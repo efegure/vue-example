@@ -1,3 +1,5 @@
+import type { RaceSchedule, RaceResult, Horse } from './common'
+
 export type ResultState = {
   raceResult: RaceResult
   currentRound: number

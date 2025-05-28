@@ -1,3 +1,5 @@
+import type { Horse, RaceSchedule, RaceRound, RoundResult, RaceResult } from './common'
+
 export interface HorseListProps {
   horses: Horse[]
   loading: boolean
