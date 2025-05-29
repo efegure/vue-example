@@ -5,7 +5,7 @@ const { horses = [], loading = false } = defineProps<HorseListProps>()
 </script>
 
 <template>
-  <div class="p-4 gap-2 flex flex-col xl:h-full xl:overflow-y-auto">
+  <div data-testid="horse-list" class="p-4 gap-2 flex flex-col xl:h-full xl:overflow-y-auto">
     <h2 class="text-xl font-bold">Horse List</h2>
     <div v-show="!loading" class="flex flex-col">
       <div

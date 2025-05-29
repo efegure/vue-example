@@ -12,7 +12,7 @@ const {
 </script>
 
 <template>
-  <div class="p-4 gap-2 flex flex-col xl:h-full xl:overflow-y-auto">
+  <div data-testid="race-track" class="p-4 gap-2 flex flex-col xl:h-full xl:overflow-y-auto">
     <h2 class="text-xl font-bold">Race Track</h2>
     <div v-show="!loading" class="flex flex-col h-full">
       <div class="flex flex-row gap-2">

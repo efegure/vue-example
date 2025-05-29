@@ -6,6 +6,7 @@ const { horse, winningOrderIds } = defineProps<HorseRacerProps>()
 
 <template>
   <div
+    data-testid="horse-racer"
     v-if="horse"
     class="absolute top-0 w-[100px] flex flex-col items-start"
     :style="{

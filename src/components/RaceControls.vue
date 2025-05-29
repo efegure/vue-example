@@ -29,7 +29,7 @@ const nextRace = () => {
 </script>
 
 <template>
-  <div class="flex flex-row gap-2 items-center justify-end">
+  <div data-testid="race-controls" class="flex flex-row gap-2 items-center justify-end">
     <p class="text-lg font-semibold text-gray-600" v-show="loading">Horses are running...</p>
     <button
       v-if="!roundResult?.winningOrderIds?.length"

@@ -10,7 +10,7 @@ const {
 </script>
 
 <template>
-  <div class="p-4 gap-2 flex flex-col xl:h-full xl:overflow-y-auto">
+  <div data-testid="race-results" class="p-4 gap-2 flex flex-col xl:h-full xl:overflow-y-auto">
     <h2 class="text-xl font-bold">Race Results</h2>
     <div v-show="!loading" class="flex flex-row gap-2 items-center">
       <p class="text-lg font-semibold text-green-600">{{ raceSchedule?.name }}</p>
