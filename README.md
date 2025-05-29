@@ -1,64 +1,58 @@
 # horse-racing
 
-This template should help get you started developing with Vue 3 in Vite.
+A very basic horse racing game done with vue 3 vuex and tailwindcss.
 
-## Recommended IDE Setup
+## Recommended setup
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+yarn recommended
 
-## Type Support for `.vue` Imports in TS
+node version: 22.14.0
+yarn version: 1.22.22
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+# Install dependencies
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
 yarn
-```
 
-### Compile and Hot-Reload for Development
+# Dev build
 
-```sh
 yarn dev
-```
 
-### Type-Check, Compile and Minify for Production
+# E2E test
 
-```sh
-yarn build
-```
+yarn test:e2e
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+# Unit test
 
-```sh
 yarn test:unit
-```
 
-### Run End-to-End Tests with [Playwright](https://playwright.dev)
-
-```sh
 # Install browsers for the first run
-npx playwright install
+
+yarn playwright install OR npx playwright install
 
 # When testing on CI, must build the project first
+
 yarn build
 
 # Runs the end-to-end tests
+
 yarn test:e2e
+
 # Runs the tests only on Chromium
+
 yarn test:e2e --project=chromium
+
 # Runs the tests of a specific file
+
 yarn test:e2e tests/example.spec.ts
+
 # Runs the tests in debug mode
+
 yarn test:e2e --debug
-```
+
+````
 
 ### Lint with [ESLint](https://eslint.org/)
 
 ```sh
 yarn lint
-```
+````

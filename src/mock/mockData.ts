@@ -1,3 +1,4 @@
+import type { Horse, RaceResult, RaceSchedule } from '@/types'
 import { shuffle } from '@/utils/shuffle'
 import { faker } from '@faker-js/faker'
 import { UniqueEnforcer } from 'enforce-unique'
